@@ -1,0 +1,5 @@
+Fonts used in this design:
+
+Font: Cardo
+Author: David Perry
+Url: http://www.fontsquirrel.com/fonts/cardo

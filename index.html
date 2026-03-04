@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acharya Rajkumar Mishra | Astrologer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #d97706;
+            --dark: #1e1b4b;
+            --light: #fff7ed;
+            --gold: #facc15;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            background: #fffaf0;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: 0.3s ease;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LOGO */
+        .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        /* MENU */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #3a2e1f;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #b8860b;
+        }
+
+        /* APPOINTMENT BUTTON */
+        .nav-btn {
+            background: linear-gradient(45deg, #b8860b, #d4af37);
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(184, 134, 11, 0.4);
+        }
+
+        /* MOBILE TOGGLE */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #3a2e1f;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+
+            .nav-menu {
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background: #fffaf0;
+                flex-direction: column;
+                width: 250px;
+                padding: 25px;
+                box-shadow: -5px 10px 25px rgba(0, 0, 0, 0.1);
+                display: none;
+                border-radius: 0 0 0 15px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #b45309;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .about {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .faq-item h4 {
+            color: var(--dark);
+        }
+
+        .faq-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .modal input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* COURSE SECTION */
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .course-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .course-content p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* PLANETS SECTION */
+        #planets {
+            background: linear-gradient(135deg, #1e1b4b, #312e81);
+            color: white;
+        }
+
+        .planet-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .planet-box {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px 10px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(6px);
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .planet-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        .planet-symbol {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--gold);
+        }
+
+        .planet-box h4 {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* MYSTIC CARD SECTION */
+        #mystic-services {
+            background: #f8f4ef;
+            padding: 100px 8%;
+        }
+
+        .mystic-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .mystic-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-left: 1px solid #d4af37;
+            border-right: 1px solid #d4af37;
+            transition: 0.3s;
+        }
+
+        .mystic-card:hover {
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .mystic-card img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            border: 4px solid #d4af37;
+        }
+
+        .mystic-card h3 {
+            font-size: 26px;
+            color: #a16207;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #d4af37;
+            margin: 15px auto 20px;
+            position: relative;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #d4af37;
+            border-radius: 50%;
+            top: -4px;
+        }
+
+        .divider::before {
+            left: -15px;
+        }
+
+        .divider::after {
+            right: -15px;
+        }
+
+        .mystic-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .mystic-card a {
+            text-decoration: none;
+            color: #d97706;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .mystic-card a:hover {
+            color: #7c2d12;
+        }
+
+        /* MODERN ABOUT SECTION */
+        #about-modern {
+            background: #f4f1ec;
+            padding: 100px 8%;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            color: #a16207;
+            font-weight: 500;
+            margin-bottom: 25px;
+            font-family: serif;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .about-text strong {
+            font-weight: 600;
+            color: #000;
+        }
+
+        .about-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn-outline {
+            border: 1px solid #000;
+            padding: 14px 25px;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .btn-dark {
+            background: #111;
+            padding: 14px 25px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn-dark:hover {
+            background: #a16207;
+        }
+
+        /* Image */
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: right;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 20px;
+        }
+
+        .appointment-section {
+            background: linear-gradient(135deg, #f8f3e7, #fff);
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #8b0000;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .appointment-form {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #b8860b;
+            outline: none;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .submit-btn {
+            margin-top: 30px;
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(45deg, #8b0000, #b8860b);
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        #formMessage {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #3c3e24);
+            display: flex;
+            align-items: center;
+            padding: 60px 5%;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT SIDE */
+        .hero-left {
+            flex: 1;
+            min-width: 300px;
+            animation: fadeInLeft 1.2s ease-in-out;
+        }
+
+        .quote {
+            color: #f5c518;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero-text {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 500px;
+        }
+
+        /* BUTTONS */
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #f5c518;
+            color: black;
+            padding: 12px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+        }
+
+        /* RIGHT SIDE ZODIAC */
+        .hero-right {
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Glowing Aura */
+        .zodiac-wrapper {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .zodiac-wrapper::before {
+            content: "";
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        .zodiac-wheel {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: rotateWheel 25s linear infinite;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Rotation Animation */
+        @keyframes rotateWheel {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Glow Pulse Animation */
+        @keyframes pulseGlow {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+
+        /* Responsive */
+        @media(max-width: 992px) {
+            .zodiac-wrapper {
+                width: 260px;
+                height: 260px;
+                margin-top: 40px;
+            }
+
+            .zodiac-wrapper::before {
+                width: 290px;
+                height: 290px;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 992px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .planet-circle {
+                width: 250px;
+                height: 250px;
+                margin-top: 40px;
+            }
+
+            .planet {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        /* Responsive */
+        @media(max-width:992px) {
+            .about-container {
+                flex-direction: column;
+            }
+
+            .about-image {
+                text-align: center;
+            }
+
+            .about-text h2 {
+                font-size: 32px;
+            }
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            header {
+                flex-direction: column;
+            }
+        }
+
+
+        .responsive-iframe {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio */
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .responsive-iframe iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- LOGO LEFT -->
+            <div class="logo">
+                <img src="images/WhatsApp Image 2026-03-04 at 14.30.59.jpeg" alt="Astrology Logo">
+            </div>
+
+            <!-- MENU -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#courses">Courses</a>
+                <a href="#planets">Planets</a>
+                <a href="#contact">Contact</a>
+                <a href="#appointment" class="nav-btn">Appointment</a>
+            </nav>
+
+            <!-- MOBILE MENU ICON -->
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
+
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="hero-left">
+                <h4 class="quote">✨ "Stars Don’t Control Your Life, They Guide It."</h4>
+                <h1 class="hero-title">Discover Your Destiny Through Ancient Vedic Astrology</h1>
+                <p class="hero-text">
+                    Get accurate Kundli analysis, career guidance, marriage prediction,
+                    and personalized remedies from experienced astrologers.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#appointment" class="btn-primary">Book Appointment</a>
+                    <a href="https://wa.me/919999999999" target="_blank" class="btn-whatsapp">
+                        Contact on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE ZODIAC WHEEL -->
+            <div class="hero-right">
+                <div class="zodiac-wrapper">
+                    <img src="images/zodiac-wheel-space-background (1)/2434851.jpg" alt="Zodiac Wheel"
+                        class="zodiac-wheel">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 style="text-align:center;color:var(--dark);">Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Kundli Reading</h3>
+                <p>Detailed birth chart analysis with life predictions.</p>
+            </div>
+            <div class="card">
+                <h3>Marriage Matching</h3>
+                <p>Accurate horoscope compatibility analysis.</p>
+            </div>
+            <div class="card">
+                <h3>Career Guidance</h3>
+                <p>Find your true career path through astrology.</p>
+            </div>
+            <div class="card">
+                <h3>Vastu Consultation</h3>
+                <p>Harmonize your home and office energies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="planets">
+        <h2 style="text-align:center;color:var(--dark);margin-bottom:40px;">
+            Navgraha – Vedic Planets
+        </h2>
+
+        <div class="planet-container">
+
+            <div class="planet-box">
+                <div class="planet-symbol">☀</div>
+                <h4>Surya (Sun)</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">☾</div>
+                <h4>Chandra (Moon)</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">♂</div>
+                <h4>Mangal (Mars)</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">☿</div>
+                <h4>Budh (Mercury)</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">♃</div>
+                <h4>Guru (Jupiter)</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">♀</div>
+                <h4>Shukra (Venus)</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">♄</div>
+                <h4>Shani (Saturn)</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">☊</div>
+                <h4>Rahu</h4>
+            </div>
+
+            <div class="planet-box">
+                <div class="planet-symbol">☋</div>
+                <h4>Ketu</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="mystic-services">
+        <div class="mystic-container">
+
+            <div class="mystic-card">
+                <img src="https://images.unsplash.com/photo-1504198266285-165a6a2f2c9b?auto=format&fit=crop&w=400&q=80">
+                <h3>Astrology</h3>
+                <div class="divider"></div>
+                <p>
+                    Unlock celestial guidance for your destiny. Gain clarity on life’s
+                    journey through expert astrology services tailored for you.
+                </p>
+                <a href="#">♦ LEARN MORE</a>
+            </div>
+
+            <div class="mystic-card">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80">
+                <h3>Numerology</h3>
+                <div class="divider"></div>
+                <p>
+                    Decode the numbers of your life’s path. Discover personality traits,
+                    destiny and potential through ancient numerology wisdom.
+                </p>
+                <a href="#">♦ LEARN MORE</a>
+            </div>
+
+            <div class="mystic-card">
+                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80">
+                <h3>Palmistry</h3>
+                <div class="divider"></div>
+                <p>
+                    Reveal your destiny through palm reading. Explore insights about your
+                    past, present and future through sacred palm lines.
+                </p>
+                <a href="#">♦ LEARN MORE</a>
+            </div>
+
+            <div class="mystic-card">
+                <img src="https://images.unsplash.com/photo-1519996521438-0b6f9b8a28f8?auto=format&fit=crop&w=400&q=80">
+                <h3>Tantra</h3>
+                <div class="divider"></div>
+                <p>
+                    Embark on a journey of spiritual awakening. Experience profound
+                    healing and empowerment through authentic tantric practices.
+                </p>
+                <a href="#">♦ LEARN MORE</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about-modern">
+        <div class="about-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="about-text">
+                <h2>Acharya Rajkumar Mishra</h2>
+
+                <p>
+                    <strong>Acharya Rajkumar Mishra is one of the leading Vedic astrologers in India.</strong>
+                    With years of deep spiritual study and practical experience, he has helped thousands
+                    of individuals transform their lives through authentic astrological guidance.
+                </p>
+
+                <p>
+                    Recognized among respected astrology practitioners, Acharya Ji provides
+                    accurate predictions, powerful remedies, and life-changing consultations.
+                    His wisdom illuminates your path and brings clarity to life’s most important decisions.
+                </p>
+
+                <div class="about-buttons">
+                    <a href="#" class="btn-outline">♦ SCHEDULE APPOINTMENT</a>
+                    <a href="#" class="btn-dark">♦ ABOUT</a>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="about-image">
+                <div class="responsive-iframe">
+                    <iframe src="https://drive.google.com/file/d/1Fbmu24-Y4QYo2eRT9mynNSwG-4Q9Bzkk/preview"
+                        allow="autoplay" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2 style="text-align:center;color:var(--dark);">Client Testimonials</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Highly accurate prediction. My career improved within months."</p>
+                <strong>- Rahul Sharma</strong>
+            </div>
+            <div class="testimonial">
+                <p>"Best astrologer for marriage guidance."</p>
+                <strong>- Neha Verma</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2 style="text-align:center;color:var(--dark);margin-bottom:40px;">
+            Astrology Courses
+        </h2>
+
+        <div class="course-container">
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1603570419889-8f4b6f4a3c20?auto=format&fit=crop&w=400&q=80">
+                <div class="course-content">
+                    <h3>Basic Vedic Astrology</h3>
+                    <p>Learn fundamentals of horoscope reading, planets, houses & signs.</p>
+                    <div class="price">₹2,999</div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80">
+                <div class="course-content">
+                    <h3>Kundli Mastery Course</h3>
+                    <p>Advanced birth chart analysis & predictive techniques.</p>
+                    <div class="price">₹4,999</div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80">
+                <div class="course-content">
+                    <h3>Marriage & Compatibility</h3>
+                    <p>Professional matching system & dosha remedies explained.</p>
+                    <div class="price">₹3,499</div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=400&q=80">
+                <div class="course-content">
+                    <h3>Astrology Business Course</h3>
+                    <p>Learn how to start & grow your astrology practice online.</p>
+                    <div class="price">₹6,999</div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2 style="text-align:center;color:var(--dark);">Frequently Asked Questions</h2>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <h4>How do I book a consultation?</h4>
+            <div class="faq-content">Click the Book Now button and fill the form.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <h4>Do you offer online sessions?</h4>
+            <div class="faq-content">Yes, sessions are available via phone and video call.</div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment-section" id="appointment">
+        <div class="container">
+            <h2 class="section-title">Book Astrology Consultation</h2>
+            <p class="section-subtitle">Provide your birth details for accurate Kundli analysis</p>
+
+            <form id="appointmentForm" class="appointment-form">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number (WhatsApp)</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time of Birth</label>
+                        <input type="time" name="tob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Place of Birth</label>
+                        <input type="text" name="pob" placeholder="City, State, Country" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select name="gender" required>
+                            <option value="">Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Consultation Type</label>
+                        <select name="consultation" required>
+                            <option value="">Select</option>
+                            <option>Marriage</option>
+                            <option>Career</option>
+                            <option>Business</option>
+                            <option>Health</option>
+                            <option>Kundli Matching</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Problem Description</label>
+                        <textarea name="message" rows="4"></textarea>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="submit-btn">Book Appointment</button>
+                <p id="formMessage"></p>
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Acharya Rajkumar Mishra | All Rights Reserved
+    </footer>
+
+    <a href="https://wa.me/919999999999" class="whatsapp">💬</a>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">X</span>
+            <h3>Book Consultation</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <input type="date">
+            <button class="btn" style="width:100%;">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            const content = element.querySelector(".faq-content");
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        function openModal() {
+            document.getElementById("bookingModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("bookingModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById("bookingModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwdReHU4utc3EyvdPSrUlFOlaQg6955i8P8rINo7KlTcyTBYVjPiN-jLj4Vdkb0LkVI/exec";
+        const form = document.getElementById("appointmentForm");
+        const message = document.getElementById("formMessage");
+
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+
+            fetch(scriptURL, {
+                method: "POST",
+                body: new FormData(form)
+            })
+                .then(response => {
+                    message.innerHTML = "Appointment Booked Successfully!";
+                    message.style.color = "green";
+
+                    // WhatsApp Auto Trigger
+                    const phone = form.phone.value;
+                    const name = form.name.value;
+
+                    const whatsappMessage = `Hello ${name}, your astrology appointment has been received. We will contact you soon.`;
+
+                    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+
+                    form.reset();
+                })
+                .catch(error => {
+                    message.innerHTML = "Error! Please try again.";
+                    message.style.color = "red";
+                });
+        });
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+    </script>
+
+</body>
+
+</html>
