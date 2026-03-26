@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acharya Rajkumar Mishra | Astrologer</title>
+    <link rel="stylesheet" href="styleh.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="chakra.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="acharya.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -41,6 +46,7 @@
             z-index: 1000;
             transition: 0.3s ease;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            margin-top: -1%;
         }
 
         .nav-container {
@@ -727,6 +733,7 @@
             box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
         }
 
+
         /* Rotation Animation */
         @keyframes rotateWheel {
             from {
@@ -843,6 +850,449 @@
             height: 100%;
             border: 0;
         }
+
+        #premium-services {
+            background: #f8f4ef;
+        }
+
+        .premium-services-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+        .premium-services-header h2 {
+            font-size: clamp(30px, 4vw, 44px);
+            color: #1f3b3a;
+            margin-bottom: 14px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+        }
+
+        .premium-services-header p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #6f6f6f;
+        }
+
+        .premium-services-grid {
+            width: min(1200px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .premium-service-card {
+            background: #fffdfb;
+            border: 2px solid #ef9c8f;
+            border-radius: 14px;
+            padding: 28px 18px 24px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            transition: all 0.35s ease;
+            height: 100%;
+        }
+
+        .premium-service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 30px rgba(239, 156, 143, 0.18);
+            border-color: #e57f6d;
+        }
+
+        .premium-service-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #ece9e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #eb7f67;
+        }
+
+        .premium-service-card h3 {
+            font-size: 18px;
+            color: #233c3b;
+            margin-bottom: 14px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+            min-height: 48px;
+        }
+
+        .premium-service-card p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .premium-service-card a {
+            text-decoration: none;
+            color: #233c3b;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .premium-service-card a:hover {
+            color: #d97706;
+        }
+
+        .review-section {
+            padding: 90px 20px;
+            overflow: hidden;
+        }
+
+        .review-heading {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .review-heading h2 {
+            font-size: clamp(30px, 4vw, 58px);
+            line-height: 1.15;
+            font-weight: 700;
+            color: #2f3654;
+        }
+
+        .review-slider-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 64px 1fr 64px;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .review-nav {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 1.5px solid #b7bccb;
+            background: #fff;
+            color: #40465f;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .review-nav:hover {
+            background: #2aa8ff;
+            border-color: #2aa8ff;
+            color: #fff;
+        }
+
+        .review-stage {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .review-track {
+            display: flex;
+            transition: transform 0.55s ease;
+            width: 100%;
+        }
+
+        .review-slide {
+            min-width: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 190px minmax(0, 1fr) 180px;
+            align-items: center;
+            gap: 18px;
+            padding: 6px 0;
+        }
+
+        .review-side-card {
+            background: #162844;
+            color: #fff;
+            border-radius: 18px;
+            padding: 18px 16px;
+            min-height: 170px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 12px 24px rgba(14, 26, 50, 0.16);
+        }
+
+        .review-side-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .review-side-top img {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .review-stars {
+            font-size: 12px;
+            color: #ffb15e;
+            white-space: nowrap;
+        }
+
+        .review-stars span {
+            color: #d3d8e7;
+        }
+
+        .review-side-bottom h4 {
+            font-size: 26px;
+            line-height: 1.15;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .review-side-bottom p {
+            font-size: 14px;
+            color: #b8c3d8;
+        }
+
+        .review-main-card {
+            background: #fff;
+            border-radius: 28px;
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            min-height: 430px;
+            overflow: hidden;
+            box-shadow: 0 14px 34px rgba(33, 46, 82, 0.08);
+        }
+
+        .review-main-image {
+            position: relative;
+            height: 100%;
+        }
+
+        .review-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .review-main-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.42), transparent 45%);
+        }
+
+        .review-main-image-text {
+            position: absolute;
+            left: 20px;
+            bottom: 18px;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .review-main-image-text h4 {
+            margin-bottom: 4px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .review-main-image-text p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.84);
+        }
+
+        .review-main-content {
+            padding: 42px 38px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .review-quote-mark {
+            font-size: 120px;
+            line-height: 0.8;
+            color: #d9ecf9;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            font-size: 28px;
+            line-height: 1.55;
+            color: #434a63;
+            max-width: 760px;
+            margin-bottom: 46px;
+            text-transform: capitalize;
+        }
+
+        .review-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            font-size: 14px;
+            color: #8f95a8;
+            letter-spacing: 0.02em;
+        }
+
+        .review-count {
+            margin-left: auto;
+            color: #6b7187;
+        }
+
+        .review-preview-card {
+            position: relative;
+            height: 330px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(33, 46, 82, 0.08);
+        }
+
+        .review-preview-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.9);
+        }
+
+        .review-preview-overlay {
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 20px;
+            color: #fff;
+        }
+
+        .review-preview-overlay h4 {
+            margin-bottom: 6px;
+            font-size: 22px;
+            line-height: 1.1;
+            font-weight: 600;
+        }
+
+        .review-preview-overlay p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .review-dots {
+            margin-top: 26px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .review-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            background: #cfd5e3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .review-dot.active {
+            width: 28px;
+            border-radius: 999px;
+            background: #2aa8ff;
+        }
+
+        @media (max-width: 1199px) {
+            .review-slide {
+                grid-template-columns: 160px minmax(0, 1fr) 140px;
+            }
+
+            .review-main-card {
+                grid-template-columns: 230px 1fr;
+                min-height: 370px;
+            }
+
+            .review-text {
+                font-size: 22px;
+            }
+
+            .review-side-bottom h4 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .review-slider-wrap {
+                grid-template-columns: 52px 1fr 52px;
+                gap: 10px;
+            }
+
+            .review-slide {
+                grid-template-columns: 1fr;
+            }
+
+            .review-side-card,
+            .review-preview-card {
+                display: none;
+            }
+
+            .review-main-card {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .review-main-image {
+                height: 320px;
+            }
+
+            .review-main-content {
+                padding: 28px 22px 22px;
+            }
+
+            .review-text {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+
+            .review-quote-mark {
+                font-size: 84px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .review-section {
+                padding: 70px 14px;
+            }
+
+            .review-slider-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .review-nav {
+                width: 48px;
+                height: 48px;
+            }
+
+            .review-prev,
+            .review-next {
+                display: none;
+            }
+
+            .review-main-image {
+                height: 260px;
+            }
+
+            .review-main-image-text h4 {
+                font-size: 20px;
+            }
+
+            .review-text {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .review-meta {
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+        }
     </style>
 </head>
 
@@ -862,10 +1312,10 @@
             <!-- MENU -->
             <nav class="nav-menu" id="navMenu">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#courses">Courses</a>
-                <a href="#planets">Planets</a>
-                <a href="#contact">Contact</a>
+                <a href="about.html">About</a>
+                <!-- <a href="#courses">Courses</a> -->
+                <!-- <a href="#planets">Planets</a> -->
+                <a href="contact.html">Contact</a>
                 <a href="#appointment" class="nav-btn">Appointment</a>
             </nav>
 
@@ -892,7 +1342,7 @@
 
                 <div class="hero-buttons">
                     <a href="#appointment" class="btn-primary">Book Appointment</a>
-                    <a href="https://wa.me/919999999999" target="_blank" class="btn-whatsapp">
+                    <a href="https://wa.me/919044880666" target="_blank" class="btn-whatsapp">
                         Contact on WhatsApp
                     </a>
                 </div>
@@ -909,6 +1359,28 @@
         </div>
     </section>
 
+    <!-- ✅ INFINITE SCROLLER -->
+    <section class="ticker-section">
+        <div class="ticker-track">
+            <div class="ticker-item">✨ Kundli Analysis</div>
+            <div class="ticker-item">🔮 Marriage Matching</div>
+            <div class="ticker-item">💼 Career Guidance</div>
+            <div class="ticker-item">🏠 Vastu Consultation</div>
+            <div class="ticker-item">💎 Gemstone Advice</div>
+            <div class="ticker-item">🪐 Navgraha Remedies</div>
+            <div class="ticker-item">📿 Spiritual Healing</div>
+
+            <!-- duplicate -->
+            <div class="ticker-item">✨ Kundli Analysis</div>
+            <div class="ticker-item">🔮 Marriage Matching</div>
+            <div class="ticker-item">💼 Career Guidance</div>
+            <div class="ticker-item">🏠 Vastu Consultation</div>
+            <div class="ticker-item">💎 Gemstone Advice</div>
+            <div class="ticker-item">🪐 Navgraha Remedies</div>
+            <div class="ticker-item">📿 Spiritual Healing</div>
+        </div>
+    </section>
+    <!-- 
     <section id="services">
         <h2 style="text-align:center;color:var(--dark);">Our Services</h2>
         <div class="services">
@@ -929,151 +1401,277 @@
                 <p>Harmonize your home and office energies.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="planets">
-        <h2 style="text-align:center;color:var(--dark);margin-bottom:40px;">
-            Navgraha – Vedic Planets
-        </h2>
 
-        <div class="planet-container">
+    <section id="premium-services">
+        <div class="premium-services-header">
+            <h2>Our Service</h2>
+            <p>
+                Explore our spiritual and astrological guidance services designed to bring
+                clarity, balance, and positive direction in different areas of life.
+            </p>
+        </div>
 
-            <div class="planet-box">
-                <div class="planet-symbol">☀</div>
-                <h4>Surya (Sun)</h4>
+        <div class="premium-services-grid">
+            <div class="premium-service-card">
+                <div class="premium-service-icon">✦</div>
+                <h3>Name Analysis</h3>
+                <p>Get insights into the energy and influence of your name through spiritual analysis.</p><a
+                    href="https://rzp.io/rzp/ww7TDCu">Book Now</a>
             </div>
-
-            <div class="planet-box">
-                <div class="planet-symbol">☾</div>
-                <h4>Chandra (Moon)</h4>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">✺</div>
+                <h3>Health Tips</h3>
+                <p>Receive astrological guidance and wellness suggestions for a balanced lifestyle.</p><a
+                    href="https://rzp.io/rzp/isq0xmnp">Book Now</a>
             </div>
-
-            <div class="planet-box">
-                <div class="planet-symbol">♂</div>
-                <h4>Mangal (Mars)</h4>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">▤</div>
+                <h3>Own Career</h3>
+                <p>Understand your strengths and find the right career path with horoscope guidance.</p><a
+                    href="https://rzp.io/rzp/mmT2HjnQ">Book Now</a>
             </div>
-
-            <div class="planet-box">
-                <div class="planet-symbol">☿</div>
-                <h4>Budh (Mercury)</h4>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">½</div>
+                <h3>Numerology</h3>
+                <p>Decode your life path, destiny number, and personal traits through numerology.</p><a
+                    href="https://rzp.io/rzp/sM3ISFTl">Book Now</a>
             </div>
-
-            <div class="planet-box">
-                <div class="planet-symbol">♃</div>
-                <h4>Guru (Jupiter)</h4>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">🙏</div>
+                <h3>Workshop Lesson</h3>
+                <p>Join spiritual workshops and learning sessions for deeper astrological knowledge.</p><a
+                    href="https://rzp.io/rzp/J1KrjVa">Book Now</a>
             </div>
-
-            <div class="planet-box">
-                <div class="planet-symbol">♀</div>
-                <h4>Shukra (Venus)</h4>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">👫</div>
+                <h3>Festival</h3>
+                <p>Learn the spiritual importance of festivals and the right rituals to follow.</p><a
+                    href="https://rzp.io/rzp/nDlARxrP">Book Now</a>
             </div>
-
-            <div class="planet-box">
-                <div class="planet-symbol">♄</div>
-                <h4>Shani (Saturn)</h4>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">💎</div>
+                <h3>Gem Stone</h3>
+                <p>Find the suitable gemstone for your birth chart and planetary balance.</p>
+                <a href="https://rzp.io/rzp/4WsXgYd6">Book Now</a>
             </div>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">♀</div>
+                <h3>Pregnancy</h3>
+                <p>Guidance related to childbirth timing, family happiness, and spiritual remedies.</p><a
+                    href="https://rzp.io/rzp/xn6ZEj42">Book Now</a>
 
-            <div class="planet-box">
-                <div class="planet-symbol">☊</div>
-                <h4>Rahu</h4>
             </div>
-
-            <div class="planet-box">
-                <div class="planet-symbol">☋</div>
-                <h4>Ketu</h4>
+            <div class="premium-service-card">
+                <div class="premium-service-icon">☐</div>
+                <h3>Kundli Dosh</h3>
+                <p>Identify doshas in the horoscope and get appropriate remedies for peace and growth.</p>
+                <a href="https://rzp.io/rzp/ncUutLka">Book Now</a>
             </div>
-
+            <div class="premium-service-card">
+                <div class="premium-service-icon">◉</div>
+                <h3>Marriage</h3>
+                <p>Get marriage prediction, compatibility checking, and relationship guidance.</p>
+                <a href="https://rzp.io/rzp/XrHG90Jw">Book Now</a>
+            </div>
         </div>
     </section>
 
-    <section id="mystic-services">
-        <div class="mystic-container">
+    <section class="planets-section">
+        <h2 class="section-title-s">Navgraha – Vedic Planets</h2>
 
-            <div class="mystic-card">
-                <img src="https://images.unsplash.com/photo-1504198266285-165a6a2f2c9b?auto=format&fit=crop&w=400&q=80">
+        <div class="planets-grid">
+            <div class="planet-card"
+                onclick="openPlanetModal('☀','Surya (Sun)','Planet of soul, authority and vitality.','Surya represents soul, authority, confidence, leadership, vitality, father, government, and self-respect. A strong Sun gives confidence, fame, recognition, and inner strength.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">☀</div>
+                </div>
+                <div class="planet-name">Surya (Sun)</div>
+                <span class="planet-sub">Soul • Leadership • Energy</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('☾','Chandra (Moon)','Planet of mind, emotions and peace.','Chandra represents emotions, mind, peace, mother, imagination, sensitivity, and mental balance. A strong Moon brings calmness, intuition, softness, and emotional stability.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">☾</div>
+                </div>
+                <div class="planet-name">Chandra (Moon)</div>
+                <span class="planet-sub">Mind • Emotions • Intuition</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('♂','Mangal (Mars)','Planet of courage, action and power.','Mangal stands for courage, action, energy, discipline, aggression, land, property, and determination. A strong Mars gives bravery, confidence, and the power to take action.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">♂</div>
+                </div>
+                <div class="planet-name">Mangal (Mars)</div>
+                <span class="planet-sub">Courage • Action • Strength</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('☿','Budh (Mercury)','Planet of intellect, speech and business.','Budh governs communication, intelligence, speaking skills, business, logic, learning, and analysis. A strong Mercury improves memory, speech, negotiation, and sharp thinking.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">☿</div>
+                </div>
+                <div class="planet-name">Budh (Mercury)</div>
+                <span class="planet-sub">Speech • Logic • Business</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('♃','Guru (Jupiter)','Planet of wisdom, blessings and knowledge.','Guru is the planet of wisdom, spirituality, knowledge, teaching, expansion, blessings, children, and good fortune. A strong Jupiter gives respect, wisdom, and divine guidance.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">♃</div>
+                </div>
+                <div class="planet-name">Guru (Jupiter)</div>
+                <span class="planet-sub">Wisdom • Blessings • Growth</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('♀','Shukra (Venus)','Planet of love, beauty and comfort.','Shukra represents love, beauty, luxury, relationships, comfort, attraction, marriage, and artistic qualities. A strong Venus gives charm, harmony, pleasure, and material comfort.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">♀</div>
+                </div>
+                <div class="planet-name">Shukra (Venus)</div>
+                <span class="planet-sub">Love • Beauty • Luxury</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('♄','Shani (Saturn)','Planet of karma, discipline and patience.','Shani stands for discipline, karma, patience, hard work, justice, delay, and responsibility. A strong Saturn gives endurance, seriousness, maturity, and long-term success.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">♄</div>
+                </div>
+                <div class="planet-name">Shani (Saturn)</div>
+                <span class="planet-sub">Karma • Discipline • Patience</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('☊','Rahu','Planet of ambition, illusion and worldly rise.','Rahu represents ambition, illusion, foreign influence, sudden rise, obsession, worldly desires, technology, and unconventional success. It can bring both breakthroughs and confusion.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">☊</div>
+                </div>
+                <div class="planet-name">Rahu</div>
+                <span class="planet-sub">Ambition • Illusion • Rise</span>
+            </div>
+
+            <div class="planet-card"
+                onclick="openPlanetModal('☋','Ketu','Planet of detachment, intuition and moksha.','Ketu represents detachment, spirituality, intuition, liberation, mysterious experiences, and inner realization. It often pushes a person toward spiritual growth and deeper understanding.')">
+                <div class="planet-icon-wrap">
+                    <div class="planet-icon">☋</div>
+                </div>
+                <div class="planet-name">Ketu</div>
+                <span class="planet-sub">Detachment • Spirituality • Moksha</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="planet-modal" id="planetModal">
+        <div class="planet-modal-content">
+            <button class="planet-modal-close" onclick="closePlanetModal()">×</button>
+
+            <div class="planet-modal-top">
+                <div class="planet-modal-icon" id="planetModalIcon">☀</div>
+                <div>
+                    <h3 id="planetModalTitle">Surya (Sun)</h3>
+                    <div class="planet-modal-subtitle" id="planetModalSubtitle">Planet subtitle</div>
+                </div>
+            </div>
+
+            <p id="planetModalText">Planet details will appear here.</p>
+        </div>
+    </div>
+
+
+
+    <section class="services">
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-img floating-circle">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+                </div>
                 <h3>Astrology</h3>
                 <div class="divider"></div>
-                <p>
-                    Unlock celestial guidance for your destiny. Gain clarity on life’s
-                    journey through expert astrology services tailored for you.
-                </p>
+                <p>Unlock celestial guidance for your destiny. Gain clarity on life’s journey through expert astrology
+                    services.</p>
                 <a href="#">♦ LEARN MORE</a>
             </div>
 
-            <div class="mystic-card">
-                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80">
+            <div class="service-card">
+                <div class="service-img floating-circle">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+                </div>
                 <h3>Numerology</h3>
                 <div class="divider"></div>
-                <p>
-                    Decode the numbers of your life’s path. Discover personality traits,
-                    destiny and potential through ancient numerology wisdom.
-                </p>
+                <p>Decode the numbers of your life path and discover personality traits through ancient numerology
+                    wisdom.</p>
                 <a href="#">♦ LEARN MORE</a>
             </div>
 
-            <div class="mystic-card">
-                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80">
+            <div class="service-card">
+                <div class="service-img floating-circle">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+                </div>
                 <h3>Palmistry</h3>
                 <div class="divider"></div>
-                <p>
-                    Reveal your destiny through palm reading. Explore insights about your
-                    past, present and future through sacred palm lines.
-                </p>
+                <p>Reveal your destiny through palm reading and explore insights about your past and future.</p>
                 <a href="#">♦ LEARN MORE</a>
             </div>
 
-            <div class="mystic-card">
-                <img src="https://images.unsplash.com/photo-1519996521438-0b6f9b8a28f8?auto=format&fit=crop&w=400&q=80">
-                <h3>Tantra</h3>
+            <div class="service-card">
+                <div class="service-img floating-circle">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9">
+                </div>
+                <h3>Vadic</h3>
                 <div class="divider"></div>
-                <p>
-                    Embark on a journey of spiritual awakening. Experience profound
-                    healing and empowerment through authentic tantric practices.
-                </p>
+                <p>Experience spiritual awakening, healing and empowerment through authentic vadic practices.</p>
                 <a href="#">♦ LEARN MORE</a>
             </div>
 
         </div>
+
     </section>
 
-    <section id="about-modern">
-        <div class="about-container">
 
-            <!-- LEFT CONTENT -->
-            <div class="about-text">
+    <section class="acharya-section">
+        <div class="glow-border"></div>
+
+        <span class="floating-particle p1"></span>
+        <span class="floating-particle p2"></span>
+        <span class="floating-particle p3"></span>
+        <span class="floating-particle p4"></span>
+        <span class="floating-particle p5"></span>
+
+        <div class="acharya-inner">
+            <div class="acharya-left-a">
+                <div class="acharya-tag">About Acharya</div>
+
                 <h2>Acharya Rajkumar Mishra</h2>
 
                 <p>
-                    <strong>Acharya Rajkumar Mishra is one of the leading Vedic astrologers in India.</strong>
-                    With years of deep spiritual study and practical experience, he has helped thousands
-                    of individuals transform their lives through authentic astrological guidance.
+                    Acharya Rajkumar Mishra is a respected astrologer known for his practical guidance, spiritual
+                    insight, and deep understanding of Vedic astrology. He offers consultation for kundli analysis,
+                    marriage guidance, career direction, dosha solutions, family matters, and important life decisions.
+                    His approach is calm, clear, and deeply personal, helping people understand their path with
+                    confidence and faith. With traditional knowledge and meaningful remedies, he guides individuals
+                    toward balance, clarity, and a more positive direction in life.
                 </p>
 
-                <p>
-                    Recognized among respected astrology practitioners, Acharya Ji provides
-                    accurate predictions, powerful remedies, and life-changing consultations.
-                    His wisdom illuminates your path and brings clarity to life’s most important decisions.
-                </p>
 
-                <div class="about-buttons">
-                    <a href="#" class="btn-outline">♦ SCHEDULE APPOINTMENT</a>
-                    <a href="#" class="btn-dark">♦ ABOUT</a>
-                </div>
+                <a href="contact.html" class="acharya-btn">Book Now</a>
             </div>
 
-            <!-- RIGHT IMAGE -->
-            <div class="about-image">
-                <div class="responsive-iframe">
-                    <iframe src="https://drive.google.com/file/d/1Fbmu24-Y4QYo2eRT9mynNSwG-4Q9Bzkk/preview"
-                        allow="autoplay" allowfullscreen>
-                    </iframe>
+            <div class="acharya-right-a">
+                <div class="acharya-photo-wrap" id="acharyaPhotoWrap">
+                    <img src="images/Acharya Rajkumar Mishra Photo.png" alt="Acharya Rajkumar Mishra"
+                        class="acharya-photo">
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section>
+    <!-- <section>
         <h2 style="text-align:center;color:var(--dark);">Client Testimonials</h2>
         <div class="testimonials">
             <div class="testimonial">
@@ -1085,7 +1683,7 @@
                 <strong>- Neha Verma</strong>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="courses">
         <h2 style="text-align:center;color:var(--dark);margin-bottom:40px;">
@@ -1095,49 +1693,69 @@
         <div class="course-container">
 
             <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1603570419889-8f4b6f4a3c20?auto=format&fit=crop&w=400&q=80">
+                <img src="images/Basic Vedic Astrology.jpg">
                 <div class="course-content">
                     <h3>Basic Vedic Astrology</h3>
                     <p>Learn fundamentals of horoscope reading, planets, houses & signs.</p>
                     <div class="price">₹2,999</div>
-                    <button class="btn">Enroll Now</button>
+                    <!-- <button class="btn"  >Enroll Now</button> -->
+                    <a class="btn" href="https://rzp.io/rzp/kNw8Dauq"> Enroll Now</a>
                 </div>
             </div>
 
             <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80">
+                <img src="images/flat-lay-hands-using-ouija-board-tool.jpg">
                 <div class="course-content">
                     <h3>Kundli Mastery Course</h3>
                     <p>Advanced birth chart analysis & predictive techniques.</p>
                     <div class="price">₹4,999</div>
-                    <button class="btn">Enroll Now</button>
+                    <a class="btn" href="https://rzp.io/rzp/tJeojyLj"> Enroll Now</a>
                 </div>
             </div>
 
             <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=400&q=80">
+                <img src="images/Marriage & Compatibility.jpg">
                 <div class="course-content">
                     <h3>Marriage & Compatibility</h3>
                     <p>Professional matching system & dosha remedies explained.</p>
-                    <div class="price">₹3,499</div>
-                    <button class="btn">Enroll Now</button>
+                    <div class="price">₹3,999</div>
+                    <a class="btn" href="https://rzp.io/rzp/d4gyHl7"> Enroll Now</a>
                 </div>
             </div>
 
             <div class="course-card">
-                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=400&q=80">
+                <img src="images/Astrology Business Course.jpg">
                 <div class="course-content">
                     <h3>Astrology Business Course</h3>
                     <p>Learn how to start & grow your astrology practice online.</p>
-                    <div class="price">₹6,999</div>
-                    <button class="btn">Enroll Now</button>
+                    <div class="price">₹6,499</div>
+                    <a class="btn" href="https://rzp.io/rzp/1VFYMts6"> Enroll Now</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="faq">
+    <!-- <section class="review-section">
+        <div class="review-heading">
+            <h2>A Few Positive User<br>Reviews Regarding Us</h2>
+        </div>
+
+        <div class="review-slider-wrap">
+            <button class="review-nav review-prev" aria-label="Previous review">&#8592;</button>
+
+            <div class="review-stage">
+                <div class="review-track" id="reviewTrack"></div>
+            </div>
+
+            <button class="review-nav review-next" aria-label="Next review">&#8594;</button>
+        </div>
+
+        <div class="review-dots" id="reviewDots"></div>
+    </section> -->
+
+
+    <!-- <section id="faq">
         <h2 style="text-align:center;color:var(--dark);">Frequently Asked Questions</h2>
         <div class="faq-item" onclick="toggleFaq(this)">
             <h4>How do I book a consultation?</h4>
@@ -1147,7 +1765,7 @@
             <h4>Do you offer online sessions?</h4>
             <div class="faq-content">Yes, sessions are available via phone and video call.</div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Appointment Section -->
     <section class="appointment-section" id="appointment">
@@ -1225,11 +1843,92 @@
         </div>
     </section>
 
-    <footer>
-        © 2026 Acharya Rajkumar Mishra | All Rights Reserved
+    <footer class="footer-wrap">
+        <div class="footer-top">
+            <div class="footer-left">
+                <div class="brand-block">
+                    <a href="#" class="brand-logo">
+                        <div class="brand-icon">ॐ</div>
+                        <div class="brand-name">Acharya Rajkumar Mishra</div>
+                    </a>
+                    <p class="brand-text">
+                        Trusted astrology guidance for life, career, marriage, remedies, and spiritual clarity.
+                        Connect with traditional wisdom through a modern digital experience.
+                    </p>
+                </div>
+
+                <div class="footer-info-block">
+                    <h5>Browse</h5>
+                    <p>Topics: Astrology, Kundli, Marriage, Career, Remedies & Spiritual Guidance</p>
+                </div>
+
+                <div class="footer-info-block">
+                    <h5>Explore</h5>
+                    <p>reports, consultations & astrology courses</p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="newsletter-box">
+                    <div class="newsletter-input-wrap">
+                        <input type="email" class="newsletter-input" placeholder="Enter Your Email" />
+                        <button class="newsletter-btn" aria-label="Submit">↗</button>
+                    </div>
+                </div>
+
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4>Learn</h4>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#appointment">Appointments</a></li>
+                            <!-- <li><a href="blog.html">Blog</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="#">Community</a></li>
+                            <!-- <li><a href="#">Knowledge Base</a></li>
+                            <li><a href="#">Academy</a></li>
+                            <li><a href="#">Support</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Address</h4>
+                        <address>
+                            Kanpur, Uttar Pradesh<br />
+                            India<br />
+                            +91 90448 80666
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+                <a href="#">Legal</a>
+                <!-- <a href="#">Recalls</a> -->
+            </div>
+
+            <div class="footer-social">
+                <!-- <a href="#" class="social-link">▶</a>
+                <a href="#" class="social-link">♪</a> -->
+                <a href="#" class="social-link">in</a>
+                <a href="#" class="social-link">◎</a>
+                <a href="#" class="social-link">f</a>
+            </div>
+        </div>
     </footer>
 
-    <a href="https://wa.me/919999999999" class="whatsapp">💬</a>
+    <a href="https://wa.me/919044880666" class="whatsapp">💬</a>
 
     <!-- Booking Modal -->
     <div class="modal" id="bookingModal">
@@ -1243,6 +1942,8 @@
         </div>
     </div>
 
+
+    <script src="script.js"></script>
     <script>
         function toggleFaq(element) {
             const content = element.querySelector(".faq-content");
@@ -1304,6 +2005,301 @@
         });
 
     </script>
+
+    <script>
+        // const reviews = [
+        //     {
+        //         side: {
+        //             name: "Ritika Sharma",
+        //             role: "Software Engineer",
+        //             rating: "★★★★★",
+        //             score: "(4.9)",
+        //             image: "https://randomuser.me/api/portraits/women/65.jpg"
+        //         },
+        //         main: {
+        //             name: "Brooklyn Simmons",
+        //             role: "Product Designer",
+        //             image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=700&q=80",
+        //             text: "Windora provide cost-effective, decentralized renewable energy systems with the best value technologies to markets contributing to global power."
+        //         },
+        //         preview: {
+        //             name: "Albert Stevano",
+        //             role: "Product Designer",
+        //             image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=500&q=80"
+        //         }
+        //     },
+        //     {
+        //         side: {
+        //             name: "Jenny Wilson",
+        //             role: "UI Designer",
+        //             rating: "★★★★★",
+        //             score: "(4.8)",
+        //             image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80"
+        //         },
+        //         main: {
+        //             name: "Cameron Williamson",
+        //             role: "Project Manager",
+        //             image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80",
+        //             text: "Their service quality, communication, and professional process helped us build trust quickly and made the full experience smooth from start to finish."
+        //         },
+        //         preview: {
+        //             name: "Savannah Nguyen",
+        //             role: "Business Owner",
+        //             image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=500&q=80"
+        //         }
+        //     },
+        //     {
+        //         side: {
+        //             name: "Robert Fox",
+        //             role: "Developer",
+        //             rating: "★★★★★",
+        //             score: "(4.7)",
+        //             image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80"
+        //         },
+        //         main: {
+        //             name: "Kristin Watson",
+        //             role: "Marketing Lead",
+        //             image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80",
+        //             text: "We truly appreciated the fast response, premium quality design, and the way every detail was handled with care and a modern professional approach."
+        //         },
+        //         preview: {
+        //             name: "Dianne Russell",
+        //             role: "Consultant",
+        //             image: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=500&q=80"
+        //         }
+        //     }
+        // ];
+
+        const track = document.getElementById("reviewTrack");
+        const dotsWrap = document.getElementById("reviewDots");
+        const prevBtn = document.querySelector(".review-prev");
+        const nextBtn = document.querySelector(".review-next");
+
+        let currentIndex = 0;
+        let autoSlide;
+
+        function createSlides() {
+            track.innerHTML = "";
+            dotsWrap.innerHTML = "";
+
+            reviews.forEach((item, index) => {
+                const slide = document.createElement("div");
+                slide.className = "review-slide";
+                slide.innerHTML = `
+          <div class="review-side-card">
+            <div class="review-side-top">
+              <img src="${item.side.image}" alt="${item.side.name}">
+              <div class="review-stars">${item.side.rating} <span>${item.side.score}</span></div>
+            </div>
+            <div class="review-side-bottom">
+              <h4>${item.side.name}</h4>
+              <p>${item.side.role}</p>
+            </div>
+          </div>
+
+          <div class="review-main-card">
+            <div class="review-main-image">
+              <img src="${item.main.image}" alt="${item.main.name}">
+              <div class="review-main-image-text">
+                <h4>${item.main.name}</h4>
+                <p>${item.main.role}</p>
+              </div>
+            </div>
+
+            <div class="review-main-content">
+              <div class="review-quote-mark">“</div>
+              <p class="review-text">${item.main.text}</p>
+              <div class="review-meta">
+                <span>[FIRST]</span>
+                <span>[PRESENT]</span>
+                <span class="review-count">${String(index + 1).padStart(2, "0")}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-preview-card">
+            <img src="${item.preview.image}" alt="${item.preview.name}">
+            <div class="review-preview-overlay">
+              <h4>${item.preview.name.replace(" ", "<br>")}</h4>
+              <p>${item.preview.role}</p>
+            </div>
+          </div>
+        `;
+                track.appendChild(slide);
+
+                const dot = document.createElement("button");
+                dot.className = "review-dot";
+                if (index === 0) dot.classList.add("active");
+                dot.addEventListener("click", () => {
+                    currentIndex = index;
+                    updateSlider();
+                    resetAutoSlide();
+                });
+                dotsWrap.appendChild(dot);
+            });
+        }
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelectorAll(".review-dot").forEach((dot, index) => {
+                dot.classList.toggle("active", index === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % reviews.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+            updateSlider();
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlide);
+            startAutoSlide();
+        }
+
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        createSlides();
+        updateSlider();
+        startAutoSlide();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script>
+        function openPlanetModal(icon, title, subtitle, text) {
+            document.getElementById("planetModalIcon").textContent = icon;
+            document.getElementById("planetModalTitle").textContent = title;
+            document.getElementById("planetModalSubtitle").textContent = subtitle;
+            document.getElementById("planetModalText").textContent = text;
+            document.getElementById("planetModal").classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closePlanetModal() {
+            document.getElementById("planetModal").classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        document.getElementById("planetModal").addEventListener("click", function (e) {
+            if (e.target === this) closePlanetModal();
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") closePlanetModal();
+        });
+
+        gsap.utils.toArray(".planet-card").forEach((card, index) => {
+            gsap.to(card, {
+                y: -10,
+                rotation: index % 2 === 0 ? 1 : -1,
+                duration: 2 + (index % 4) * 0.15,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: index * 0.06
+            });
+        });
+
+        gsap.utils.toArray(".planet-icon-wrap").forEach((circle, index) => {
+            gsap.to(circle, {
+                boxShadow: "0 0 0 10px rgba(246, 201, 69, 0.08), 0 0 34px rgba(246, 201, 69, 0.38), inset 0 0 22px rgba(255,255,255,0.24)",
+                duration: 1.6 + index * 0.03,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        });
+    </script>
+
+    <script>
+
+        /* GSAP FLOATING ANIMATION */
+        gsap.utils.toArray(".floating-circle").forEach((circle, i) => {
+            gsap.to(circle, {
+                y: i % 2 === 0 ? -12 : -18,
+                duration: 2.5 + (i * 0.2),
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: i * 0.2
+            });
+        });
+
+    </script>
+
+    <script>
+        gsap.to("#acharyaPhotoWrap", {
+            y: -12,
+            duration: 2.4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to(".p1", {
+            y: -18,
+            x: 10,
+            duration: 3.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to(".p2", {
+            y: 14,
+            x: -8,
+            duration: 4.2,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to(".p3", {
+            y: -12,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to(".p4", {
+            y: 16,
+            x: 6,
+            duration: 3.8,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        gsap.to(".p5", {
+            y: -15,
+            x: -10,
+            duration: 4.4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+    </script>
+
+
+
 
 </body>
 
