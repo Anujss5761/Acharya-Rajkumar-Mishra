@@ -1,0 +1,49 @@
+:root {
+  --primary: #d97706;
+  --dark: #1e1b4b;
+  --light: #fff7ed;
+  --gold: #facc15;
+}
+
+/* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        } */
+
+body {
+  background: var(--light);
+}
+
+/* ===== INFINITE SCROLLER ===== */
+.ticker-section {
+  background: linear-gradient(90deg, #fff7ed, #fef3c7, #fff7ed);
+  padding: 18px 0;
+  overflow: hidden;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: scrollTicker 25s linear infinite;
+}
+
+.ticker-item {
+  margin-right: 20px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: white;
+  border: 1px solid #d4af37;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
