@@ -309,7 +309,7 @@
         padding:60px 40px;
       }
 
-      .acharya-left h2{
+      .acharya-left-a h2{
         font-size:46px;
       }
 
@@ -329,21 +329,21 @@
         padding:50px 24px 0;
       }
 
-      .acharya-left,
-      .acharya-right{
+      .acharya-left-a,
+      .acharya-right-a{
         width:100%;
       }
 
-      .acharya-left h2{
+      .acharya-left-a h2{
         font-size:36px;
       }
 
-      .acharya-left p{
+      .acharya-left-a p{
         font-size:15px;
         line-height:1.85;
       }
 
-      .acharya-right{
+      .acharya-right-a{
         min-height:470px;
         margin-top:10px;
       }
@@ -372,11 +372,11 @@
         padding:8px 14px;
       }
 
-      .acharya-left h2{
+      .acharya-left-a h2{
         font-size:28px;
       }
 
-      .acharya-left p{
+      .acharya-left-a p{
         font-size:14px;
         line-height:1.8;
         margin-bottom:24px;
@@ -411,7 +411,7 @@
         font-size:14px;
       }
 
-      .acharya-right{
+      .acharya-right-a{
         min-height:370px;
       }
 

@@ -1,66 +1,66 @@
 
     const reviews = [
-      {
+    {
         side: {
-          name: "Esther Howard",
-          role: "Product Designer",
-          rating: "★★★★★",
-          score: "(4.5)",
-          image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+            name: "Ritika Sharma",
+            role: "Software Engineer",
+            rating: "★★★★★",
+            score: "(4.9)",
+            image: "https://randomuser.me/api/portraits/women/65.jpg"
         },
         main: {
-          name: "Brooklyn Simmons",
-          role: "Product Designer",
-          image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=700&q=80",
-          text: "Windora provide cost-effective, decentralized renewable energy systems with the best value technologies to markets contributing to global power."
+            name: "Amit Verma",
+            role: "Business Owner",
+            image: "https://randomuser.me/api/portraits/men/32.jpg",
+            text: "I consulted Acharya Rajkumar Mishra ji during a difficult phase in my business. His guidance was extremely accurate and helped me take the right decisions at the right time."
         },
         preview: {
-          name: "Albert Stevano",
-          role: "Product Designer",
-          image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=500&q=80"
+            name: "Neha Gupta",
+            role: "Teacher",
+            image: "https://randomuser.me/api/portraits/women/45.jpg"
         }
-      },
-      {
+    },
+    {
         side: {
-          name: "Jenny Wilson",
-          role: "UI Designer",
-          rating: "★★★★★",
-          score: "(4.8)",
-          image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80"
+            name: "Saurabh Singh",
+            role: "Bank Manager",
+            rating: "★★★★★",
+            score: "(4.8)",
+            image: "https://randomuser.me/api/portraits/men/76.jpg"
         },
         main: {
-          name: "Cameron Williamson",
-          role: "Project Manager",
-          image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80",
-          text: "Their service quality, communication, and professional process helped us build trust quickly and made the full experience smooth from start to finish."
+            name: "Pooja Mishra",
+            role: "Homemaker",
+            image: "https://randomuser.me/api/portraits/women/68.jpg",
+            text: "Acharya ji’s predictions about my marriage were completely correct. His remedies were simple and effective. I feel much more positive and confident now."
         },
         preview: {
-          name: "Savannah Nguyen",
-          role: "Business Owner",
-          image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=500&q=80"
+            name: "Rohit Tiwari",
+            role: "Civil Engineer",
+            image: "https://randomuser.me/api/portraits/men/54.jpg"
         }
-      },
-      {
+    },
+    {
         side: {
-          name: "Robert Fox",
-          role: "Developer",
-          rating: "★★★★★",
-          score: "(4.7)",
-          image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80"
+            name: "Kavita Yadav",
+            role: "HR Manager",
+            rating: "★★★★★",
+            score: "(4.7)",
+            image: "https://randomuser.me/api/portraits/women/52.jpg"
         },
         main: {
-          name: "Kristin Watson",
-          role: "Marketing Lead",
-          image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=80",
-          text: "We truly appreciated the fast response, premium quality design, and the way every detail was handled with care and a modern professional approach."
+            name: "Deepak Pandey",
+            role: "Entrepreneur",
+            image: "https://randomuser.me/api/portraits/men/41.jpg",
+            text: "The consultation with Acharya Rajkumar Mishra ji gave me clarity about my career path. His advice felt genuine, practical, and deeply insightful."
         },
         preview: {
-          name: "Dianne Russell",
-          role: "Consultant",
-          image: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=500&q=80"
+            name: "Anjali Srivastava",
+            role: "Student",
+            image: "https://randomuser.me/api/portraits/women/33.jpg"
         }
-      }
-    ];
+    }
+];
 
     const track = document.getElementById("reviewTrack");
     const dotsWrap = document.getElementById("reviewDots");

@@ -931,18 +931,42 @@
     </div>
   </section>
 
-  <script>
-    const faqItems = document.querySelectorAll(".faq-item");
+ <script>
+  const faqItems = document.querySelectorAll(".faq-item");
 
-    faqItems.forEach(item => {
-      const btn = item.querySelector(".faq-question");
-      btn.addEventListener("click", () => {
-        faqItems.forEach(other => {
-          if (other !== item) other.classList.remove("active");
-        });
-        item.classList.toggle("active");
+  faqItems.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+    btn.addEventListener("click", () => {
+      faqItems.forEach(other => {
+        if (other !== item) other.classList.remove("active");
       });
+      item.classList.toggle("active");
     });
-  </script>
+  });
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    menuToggle.textContent = navMenu.classList.contains("active") ? "✕" : "☰";
+  });
+
+  document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      menuToggle.textContent = "☰";
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove("active");
+      menuToggle.textContent = "☰";
+    }
+  });
+</script>
+
+
 </body>
 </html>
