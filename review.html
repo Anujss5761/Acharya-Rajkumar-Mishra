@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -415,4 +416,423 @@
   </footer>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Footer Section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      padding: 24px;
+    }
+
+    .footer-wrap {
+      max-width: 1500px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #11243b 0%, #162a44 100%);
+      border-radius: 34px;
+      padding: 42px 38px 26px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(7, 23, 41, 0.18);
+    }
+
+    .footer-wrap::before,
+    .footer-wrap::after {
+      content: "";
+      position: absolute;
+      inset: auto;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.025);
+      filter: blur(2px);
+      pointer-events: none;
+    }
+
+    .footer-wrap::before {
+      width: 580px;
+      height: 580px;
+      left: 32%;
+      top: 18%;
+    }
+
+    .footer-wrap::after {
+      width: 420px;
+      height: 420px;
+      right: 12%;
+      bottom: 6%;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 54px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .brand-block {
+      max-width: 340px;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.08);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text {
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+      line-height: 1.75;
+      max-width: 320px;
+    }
+
+    .footer-info-block h5 {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 12px;
+    }
+
+    .footer-info-block p {
+      font-size: clamp(28px, 3vw, 52px);
+      line-height: 1.12;
+      font-weight: 600;
+      max-width: 520px;
+      color: #fff;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 46px;
+    }
+
+    .newsletter-box {
+      width: 100%;
+    }
+
+    .newsletter-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .newsletter-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 400;
+    }
+
+    .newsletter-input::placeholder {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .newsletter-btn {
+      width: 76px;
+      height: 76px;
+      min-width: 76px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1bb7ff, #1f8fff);
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      transition: 0.35s ease;
+      box-shadow: 0 14px 28px rgba(28, 158, 255, 0.28);
+    }
+
+    .newsletter-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 14px;
+    }
+
+    .footer-col ul li a,
+    .footer-col address,
+    .footer-col p {
+      text-decoration: none;
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+      line-height: 1.7;
+      font-style: normal;
+      transition: 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #4bc2ff;
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      position: relative;
+      z-index: 2;
+      margin-top: 52px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-legal a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.76);
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+      color: #ffffff;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .social-link {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #fff;
+      color: #0f2238;
+      text-decoration: none;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 700;
+      transition: 0.35s ease;
+    }
+
+    .social-link:hover {
+      background: #1bb7ff;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 1199px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-info-block p {
+        max-width: 100%;
+      }
+
+      .footer-links-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding: 14px;
+      }
+
+      .footer-wrap {
+        border-radius: 26px;
+        padding: 28px 22px 22px;
+      }
+
+      .newsletter-input-wrap {
+        gap: 14px;
+      }
+
+      .newsletter-btn {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        font-size: 24px;
+      }
+
+      .footer-links-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-social {
+        flex-wrap: wrap;
+      }
+
+      .social-link {
+        width: 46px;
+        height: 46px;
+      }
+
+      .footer-info-block p {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <footer class="footer-wrap">
+    <div class="footer-top">
+      <div class="footer-left">
+        <div class="brand-block">
+          <a href="#" class="brand-logo">
+            <div class="brand-icon">ॐ</div>
+            <div class="brand-name">Acharya Rajkumar Mishra</div>
+          </a>
+          <p class="brand-text">
+            Trusted astrology guidance for life, career, marriage, remedies, and spiritual clarity.
+            Connect with traditional wisdom through a modern digital experience.
+          </p>
+        </div>
+
+        <div class="footer-info-block">
+          <h5>Browse</h5>
+          <p>Topics: Astrology, Kundli, Marriage, Career, Remedies & Spiritual Guidance</p>
+        </div>
+
+        <div class="footer-info-block">
+          <h5>Explore</h5>
+          <p>reports, consultations & astrology courses</p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="newsletter-box">
+          <div class="newsletter-input-wrap">
+            <input type="email" class="newsletter-input" placeholder="Enter Your Email" />
+            <button class="newsletter-btn" aria-label="Submit">↗</button>
+          </div>
+        </div>
+
+        <div class="footer-links-grid">
+          <div class="footer-col">
+            <h4>Learn</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Knowledge Base</a></li>
+              <li><a href="#">Academy</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Address</h4>
+            <address>
+              Gorakhpur, Uttar Pradesh<br />
+              India<br />
+              +91 90448 80666
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Cookies</a>
+        <a href="#">Legal</a>
+        <a href="#">Recalls</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="#" class="social-link">▶</a>
+        <a href="#" class="social-link">♪</a>
+        <a href="#" class="social-link">in</a>
+        <a href="#" class="social-link">◎</a>
+        <a href="#" class="social-link">f</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+>>>>>>> 5429da74df68f4b2fbfb945f3a034bc54d9ecbc5
 </html>

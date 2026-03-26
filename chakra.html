@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -523,4 +524,531 @@
   </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acharya Rajkumar Mishra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    :root{
+      --gold-1:#f4e3ab;
+      --gold-2:#d4af37;
+      --gold-3:#b88918;
+      --cream:#f7f1e4;
+      --dark-1:#050816;
+      --dark-2:#091126;
+      --dark-3:#101a34;
+      --white-soft:rgba(255,255,255,0.84);
+    }
+
+    body{
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.08), transparent 20%),
+        linear-gradient(180deg, #f8f2e8 0%, #f4ecdf 100%);
+      font-family:"Montserrat", sans-serif;
+      padding:40px 20px;
+      overflow-x:hidden;
+    }
+
+    .acharya-section{
+      max-width:1320px;
+      margin:0 auto;
+      min-height:440px;
+      position:relative;
+      overflow:visible;
+      background:
+        linear-gradient(90deg, rgba(4,8,20,0.98) 0%, rgba(5,9,24,0.97) 42%, rgba(8,12,30,0.82) 63%, rgba(8,12,30,0.18) 100%),
+        url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      box-shadow:
+        0 24px 70px rgba(0,0,0,0.24),
+        inset 0 0 0 1px rgba(255,255,255,0.03);
+      border:1px solid rgba(212,175,55,0.16);
+      isolation:isolate;
+    }
+
+    .acharya-section::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 18% 42%, rgba(212,175,55,0.10), transparent 28%),
+        radial-gradient(circle at 24% 62%, rgba(255,255,255,0.06), transparent 32%),
+        linear-gradient(180deg, rgba(255,255,255,0.03), transparent 26%);
+      pointer-events:none;
+      z-index:1;
+    }
+
+    .acharya-section::after{
+      content:"";
+      position:absolute;
+      inset:14px;
+      border:1px solid rgba(212,175,55,0.14);
+      pointer-events:none;
+      z-index:2;
+    }
+
+    .glow-border{
+      position:absolute;
+      inset:-2px;
+      pointer-events:none;
+      z-index:0;
+      border-radius:0;
+      background:
+        linear-gradient(90deg,
+          rgba(212,175,55,0) 0%,
+          rgba(212,175,55,0.18) 20%,
+          rgba(244,227,171,0.5) 35%,
+          rgba(212,175,55,0.18) 50%,
+          rgba(212,175,55,0) 70%);
+      filter:blur(10px);
+      animation:borderGlow 5s linear infinite;
+      opacity:0.9;
+    }
+
+    @keyframes borderGlow{
+      0%{transform:translateX(-25%);}
+      100%{transform:translateX(25%);}
+    }
+
+    .floating-particle{
+      position:absolute;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(244,227,171,0.95) 0%, rgba(212,175,55,0.18) 70%, transparent 100%);
+      filter:blur(0.5px);
+      z-index:1;
+      opacity:0.75;
+      pointer-events:none;
+    }
+
+    .p1{top:15%; left:10%;}
+    .p2{top:22%; left:32%; width:10px; height:10px;}
+    .p3{top:68%; left:22%; width:6px; height:6px;}
+    .p4{top:38%; right:21%; width:7px; height:7px;}
+    .p5{bottom:18%; right:12%; width:9px; height:9px;}
+
+    .acharya-inner{
+      position:relative;
+      z-index:3;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:640px;
+      padding:72px 70px;
+      gap:24px;
+      /* border: 2px solid white; */
+    }
+
+    .acharya-left{
+      width:56%;
+      color:#fff;
+      position:relative;
+      z-index:3;
+      /* border: 2px solid white; */
+    }
+
+    .acharya-tag{
+      display:inline-block;
+      padding:10px 18px;
+      margin-bottom:20px;
+      font-size:12px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:var(--gold-1);
+      border:1px solid rgba(212,175,55,0.28);
+      background:rgba(255,255,255,0.04);
+      backdrop-filter:blur(8px);
+      box-shadow:inset 0 0 20px rgba(212,175,55,0.04);
+    }
+
+    .acharya-left h2{
+      font-family:"Cinzel", serif;
+      font-size:56px;
+      line-height:1.1;
+      font-weight:700;
+      color:var(--cream);
+      margin-bottom:20px;
+      letter-spacing:-0.6px;
+      text-shadow:0 2px 12px rgba(0,0,0,0.18);
+    }
+
+    .acharya-left p{
+      font-size:16px;
+      line-height:1.95;
+      color:var(--white-soft);
+      max-width:700px;
+      margin-bottom:34px;
+    }
+
+    .acharya-steps{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      margin-bottom:34px;
+    }
+
+    .acharya-step{
+      min-width:118px;
+      padding:18px 14px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.10);
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(10px);
+      transition:0.35s ease;
+      box-shadow:inset 0 0 18px rgba(255,255,255,0.02);
+    }
+
+    .acharya-step:hover{
+      transform:translateY(-4px);
+      border-color:rgba(212,175,55,0.35);
+      box-shadow:0 16px 34px rgba(0,0,0,0.18);
+    }
+
+    .acharya-step-icon{
+      width:58px;
+      height:58px;
+      margin:0 auto 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      border:1px solid rgba(212,175,55,0.34);
+      background:rgba(255,255,255,0.04);
+      box-shadow:
+        inset 0 0 16px rgba(212,175,55,0.05),
+        0 0 18px rgba(212,175,55,0.04);
+    }
+
+    .acharya-step-icon svg{
+      width:26px;
+      height:26px;
+      fill:#f7e7b5;
+    }
+
+    .acharya-step span{
+      display:block;
+      font-size:14px;
+      font-weight:600;
+      color:#fff;
+    }
+
+    .acharya-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      min-width:180px;
+      height:56px;
+      padding:0 28px;
+      background:linear-gradient(135deg, var(--gold-1), var(--gold-2), var(--gold-3));
+      color:#1c1406;
+      font-size:15px;
+      font-weight:700;
+      letter-spacing:0.3px;
+      box-shadow:
+        0 16px 30px rgba(0,0,0,0.22),
+        0 0 24px rgba(212,175,55,0.18);
+      transition:0.35s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .acharya-btn::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-120%;
+      width:80%;
+      height:100%;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+      transform:skewX(-20deg);
+      transition:0.7s ease;
+    }
+
+    .acharya-btn:hover{
+      transform:translateY(-3px);
+      box-shadow:
+        0 20px 36px rgba(0,0,0,0.28),
+        0 0 30px rgba(212,175,55,0.24);
+    }
+
+    .acharya-btn:hover::before{
+      left:140%;
+    }
+
+    .acharya-right{
+      width:44%;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      min-height:640px;
+      overflow:visible;
+      /* border: 2px solid white; */
+    }
+
+    .acharya-photo-wrap{
+      position:absolute;
+      top: -1px;
+      /* right:-10px; */
+      bottom:-2px;
+      width:480px;
+      max-width:100%;
+      z-index:4;
+      overflow:visible;
+      transform-origin:center bottom;
+    }
+
+    .acharya-photo-wrap::before{
+      content:"";
+      position:absolute;
+      inset:18px 16px -8px 16px;
+      background:radial-gradient(circle at center, rgba(212,175,55,0.2), rgba(212,175,55,0.05) 45%, transparent 74%);
+      filter:blur(18px);
+      z-index:-1;
+    }
+
+    .acharya-photo-wrap::after{
+      content:"";
+      position:absolute;
+      bottom:-12px;
+      left:16%;
+      width:68%;
+      height:28px;
+      background:radial-gradient(ellipse at center, rgba(0,0,0,0.46) 0%, rgba(0,0,0,0) 72%);
+      filter:blur(10px);
+      z-index:-1;
+    }
+
+    .acharya-photo{
+      width:100%;
+      display:block;
+      object-fit:cover;
+      object-position:center top;
+      filter:drop-shadow(0 26px 44px rgba(0,0,0,0.38));
+    }
+
+    @media (max-width:1150px){
+      .acharya-inner{
+        padding:60px 40px;
+      }
+
+      .acharya-left h2{
+        font-size:46px;
+      }
+
+      .acharya-photo-wrap{
+        width:410px;
+        right:0;
+      }
+    }
+
+    @media (max-width:920px){
+      .acharya-section{
+        overflow:hidden;
+      }
+
+      .acharya-inner{
+        flex-direction:column;
+        padding:50px 24px 0;
+      }
+
+      .acharya-left,
+      .acharya-right{
+        width:100%;
+      }
+
+      .acharya-left h2{
+        font-size:36px;
+      }
+
+      .acharya-left p{
+        font-size:15px;
+        line-height:1.85;
+      }
+
+      .acharya-right{
+        min-height:470px;
+        margin-top:10px;
+      }
+
+      .acharya-photo-wrap{
+        position:relative;
+        right:auto;
+        bottom:-14px;
+        width:360px;
+        margin:0 auto;
+      }
+    }
+
+    @media (max-width:600px){
+      body{
+        padding:20px 10px;
+      }
+
+      .acharya-inner{
+        padding:36px 16px 0;
+      }
+
+      .acharya-tag{
+        font-size:11px;
+        letter-spacing:1.6px;
+        padding:8px 14px;
+      }
+
+      .acharya-left h2{
+        font-size:28px;
+      }
+
+      .acharya-left p{
+        font-size:14px;
+        line-height:1.8;
+        margin-bottom:24px;
+      }
+
+      .acharya-steps{
+        gap:12px;
+      }
+
+      .acharya-step{
+        min-width:calc(50% - 6px);
+        padding:16px 10px;
+      }
+
+      .acharya-step-icon{
+        width:50px;
+        height:50px;
+      }
+
+      .acharya-step-icon svg{
+        width:22px;
+        height:22px;
+      }
+
+      .acharya-step span{
+        font-size:13px;
+      }
+
+      .acharya-btn{
+        min-width:150px;
+        height:50px;
+        font-size:14px;
+      }
+
+      .acharya-right{
+        min-height:370px;
+      }
+
+      .acharya-photo-wrap{
+        width:285px;
+        bottom:-10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="acharya-section">
+    <div class="glow-border"></div>
+
+    <span class="floating-particle p1"></span>
+    <span class="floating-particle p2"></span>
+    <span class="floating-particle p3"></span>
+    <span class="floating-particle p4"></span>
+    <span class="floating-particle p5"></span>
+
+    <div class="acharya-inner">
+      <div class="acharya-left">
+        <div class="acharya-tag">About Acharya</div>
+
+        <h2>Acharya Rajkumar Mishra</h2>
+
+        <p>
+          Acharya Rajkumar Mishra is a respected astrologer known for his practical guidance, spiritual insight, and deep understanding of Vedic astrology. He offers consultation for kundli analysis, marriage guidance, career direction, dosha solutions, family matters, and important life decisions. His approach is calm, clear, and deeply personal, helping people understand their path with confidence and faith. With traditional knowledge and meaningful remedies, he guides individuals toward balance, clarity, and a more positive direction in life.
+        </p>
+
+
+        <a href="#contact" class="acharya-btn">Book Now</a>
+      </div>
+
+      <div class="acharya-right">
+        <div class="acharya-photo-wrap" id="acharyaPhotoWrap">
+          <img src="images/Acharya Rajkumar Mishra Photo.png" alt="Acharya Rajkumar Mishra" class="acharya-photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    gsap.to("#acharyaPhotoWrap", {
+      y: -12,
+      duration: 2.4,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
+    gsap.to(".p1", {
+      y: -18,
+      x: 10,
+      duration: 3.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
+    gsap.to(".p2", {
+      y: 14,
+      x: -8,
+      duration: 4.2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
+    gsap.to(".p3", {
+      y: -12,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
+    gsap.to(".p4", {
+      y: 16,
+      x: 6,
+      duration: 3.8,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
+    gsap.to(".p5", {
+      y: -15,
+      x: -10,
+      duration: 4.4,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+  </script>
+
+</body>
+>>>>>>> 5429da74df68f4b2fbfb945f3a034bc54d9ecbc5
 </html>
