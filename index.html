@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acharya Rajkumar Mishra | Astrologer</title>
-      <link rel="icon" type="image/png" sizes="64x64" href="images/WhatsApp Image 2026-03-04 at 14.30.59.jpeg">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/WhatsApp Image 2026-03-04 at 14.30.59.jpeg">
     <link rel="stylesheet" href="styleh.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="chakra.css">
@@ -1737,20 +1737,17 @@
 
         </div>
     </section>
-<!-- 
+    <!-- 
     <section class="review-section">
         <div class="review-heading">
             <h2>A Few Positive User<br>Reviews Regarding Us</h2>
         </div>
 
-<<<<<<< HEAD
-=======
-    <!-- <section class="review-section">
+
+     <section class="review-section">
         <div class="review-heading">
             <h2>A Few Positive User<br>Reviews Regarding Us</h2>
         </div>
-
->>>>>>> 5429da74df68f4b2fbfb945f3a034bc54d9ecbc5
         <div class="review-slider-wrap">
             <button class="review-nav review-prev" aria-label="Previous review">&#8592;</button>
 
@@ -1980,40 +1977,34 @@
         const form = document.getElementById("appointmentForm");
         const message = document.getElementById("formMessage");
 
-        form.addEventListener("submit", e => {
+        form.addEventListener("submit", (e) => {
             e.preventDefault();
 
             fetch(scriptURL, {
                 method: "POST",
                 body: new FormData(form)
             })
-                .then(response => {
+                .then((response) => {
                     message.innerHTML = "Appointment Booked Successfully!";
                     message.style.color = "green";
 
-                    // WhatsApp Auto Trigger
-                    const phone = form.phone.value;
-                    const name = form.name.value;
+                    const name = form.name.value.trim();
 
                     const whatsappMessage = `Hello ${name}, your astrology appointment has been received. We will contact you soon.`;
 
-                    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                    // Your fixed WhatsApp number (with country code)
+                    const phone = "919044880666";
+
+                    // Redirect to WhatsApp
+                    window.location.href = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(whatsappMessage)}`;
 
                     form.reset();
                 })
-                .catch(error => {
+                .catch((error) => {
                     message.innerHTML = "Error! Please try again.";
                     message.style.color = "red";
                 });
         });
-
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
-
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-
     </script>
 
     <script>
